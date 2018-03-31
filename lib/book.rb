@@ -10,6 +10,8 @@ class Book
 
   def genre= (genre)
     @genre = genre
+    # don't want to have duplicates (like if we have a lot of mysteries)
+    # another approach is to verify genre not in GENRE before adding it
     (GENRES << genre).uniq!
   end
 
